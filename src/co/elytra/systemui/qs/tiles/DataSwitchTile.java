@@ -1,4 +1,4 @@
-package co.aospa.systemui.qs.tiles;
+package co.elytra.systemui.qs.tiles;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

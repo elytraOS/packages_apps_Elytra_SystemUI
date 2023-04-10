@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2019 The Android Open Source Project
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.aospa.systemui.dagger;
+package co.elytra.systemui.dagger;
 
 import static com.android.systemui.Dependency.ALLOW_NOTIFICATION_LONG_PRESS_NAME;
 import static com.android.systemui.Dependency.LEAK_REPORT_EMAIL_NAME;
@@ -70,9 +70,9 @@ import com.android.systemui.statusbar.policy.SensorPrivacyControllerImpl;
 
 import javax.inject.Named;
 
-import co.aospa.systemui.controls.AospaControlsTileResourceConfigurationImpl;
-import co.aospa.systemui.qs.tileimpl.ParanoidQSFactoryImpl;
-import co.aospa.systemui.volume.dagger.ParanoidVolumeModule;
+import co.elytra.systemui.controls.AospaControlsTileResourceConfigurationImpl;
+import co.elytra.systemui.qs.tileimpl.ElytraQSFactoryImpl;
+import co.elytra.systemui.volume.dagger.ElytraVolumeModule;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
@@ -88,9 +88,9 @@ import dagger.Provides;
         QSModule.class,
         ReferenceScreenshotModule.class,
         StartCentralSurfacesModule.class,
-        ParanoidVolumeModule.class
+        ElytraVolumeModule.class
 })
-public abstract class ParanoidSystemUIModule {
+public abstract class ElytraSystemUIModule {
 
     @SysUISingleton
     @Provides
@@ -125,7 +125,7 @@ public abstract class ParanoidSystemUIModule {
     /** */
     @Binds
     @SysUISingleton
-    public abstract QSFactory bindQSFactory(ParanoidQSFactoryImpl qsFactoryImpl);
+    public abstract QSFactory bindQSFactory(ElytraQSFactoryImpl qsFactoryImpl);
 
     @Binds
     abstract DockManager bindDockManager(DockManagerImpl dockManager);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.aospa.systemui.dagger;
+package co.elytra.systemui.dagger;
 
 import com.android.systemui.dagger.DefaultComponentBinder;
 import com.android.systemui.dagger.DependencyProvider;
@@ -34,14 +34,14 @@ import dagger.Subcomponent;
         NotificationInsetsModule.class,
         QsFrameTranslateModule.class,
         SystemUIBinder.class,
-        ParanoidSystemUICoreStartableModule.class,
+        ElytraSystemUICoreStartableModule.class,
         SystemUIModule.class,
-        ParanoidSystemUIModule.class})
-public interface ParanoidSysUIComponent extends SysUIComponent {
+        ElytraSystemUIModule.class})
+public interface ElytraSysUIComponent extends SysUIComponent {
     @SysUISingleton
     @Subcomponent.Builder
     interface Builder extends SysUIComponent.Builder {
-        ParanoidSysUIComponent build();
+        ElytraSysUIComponent build();
     }
 
     /**

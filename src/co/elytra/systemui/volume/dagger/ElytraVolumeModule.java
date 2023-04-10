@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.aospa.systemui.volume.dagger;
+package co.elytra.systemui.volume.dagger;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -33,8 +33,8 @@ import com.android.systemui.volume.VolumeDialogImpl;
 import com.android.systemui.volume.VolumePanelFactory;
 import com.android.systemui.volume.dagger.VolumeModule;
 
-import co.aospa.systemui.tristate.dagger.TriStateModule;
-import co.aospa.systemui.volume.ParanoidVolumeDialogComponent;
+import co.elytra.systemui.tristate.dagger.TriStateModule;
+import co.elytra.systemui.volume.ElytraVolumeDialogComponent;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
@@ -44,10 +44,10 @@ import dagger.Provides;
  * Fork of {@link VolumeModule}
  */
 @Module(includes = {TriStateModule.class})
-public interface ParanoidVolumeModule {
+public interface ElytraVolumeModule {
     /** */
     @Binds
-    VolumeComponent provideVolumeComponent(ParanoidVolumeDialogComponent volumeDialogComponent);
+    VolumeComponent provideVolumeComponent(ElytraVolumeDialogComponent volumeDialogComponent);
 
     /** */
     @Provides

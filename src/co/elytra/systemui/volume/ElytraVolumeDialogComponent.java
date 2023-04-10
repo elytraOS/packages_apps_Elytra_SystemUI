@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.systemui.volume;
+package co.elytra.systemui.volume;
 
 import android.content.Context;
 import android.view.WindowManager;
@@ -34,18 +34,18 @@ import com.android.systemui.volume.VolumeDialogControllerImpl;
 
 import javax.inject.Inject;
 
-import co.aospa.systemui.tristate.TriStateUiController;
+import co.elytra.systemui.tristate.TriStateUiController;
 import dagger.Lazy;
 
 @SysUISingleton
-public class ParanoidVolumeDialogComponent extends VolumeDialogComponent
+public class ElytraVolumeDialogComponent extends VolumeDialogComponent
         implements TriStateUiController.UserActivityListener {
 
     @Nullable
     private TriStateUiController mTriStateUiController;
 
     @Inject
-    public ParanoidVolumeDialogComponent(Context context,
+    public ElytraVolumeDialogComponent(Context context,
             KeyguardViewMediator keyguardViewMediator,
             ActivityStarter activityStarter,
             VolumeDialogControllerImpl volumeDialogController,

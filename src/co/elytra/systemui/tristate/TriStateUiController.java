@@ -1,6 +1,6 @@
 /*
  * Copyright 2019 CypherOS
- * Copyright 2014-2020 Paranoid Android
+ * Copyright 2014-2020 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package co.aospa.systemui.tristate;
+package co.elytra.systemui.tristate;
 
-import static co.aospa.systemui.tristate.TriStateUiController.ACTION;
-import static co.aospa.systemui.tristate.TriStateUiController.VERSION;
+import static co.elytra.systemui.tristate.TriStateUiController.ACTION;
+import static co.elytra.systemui.tristate.TriStateUiController.VERSION;
 
 import android.view.WindowManager.LayoutParams.WindowType;
 

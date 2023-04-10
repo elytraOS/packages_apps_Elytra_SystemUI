@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2022 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,22 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.aospa.systemui;
+package co.elytra.systemui.dagger;
 
-import android.content.Context;
-
-import com.android.systemui.SystemUIInitializer;
+import com.android.systemui.dagger.GlobalModule;
 import com.android.systemui.dagger.GlobalRootComponent;
 
-import co.aospa.systemui.dagger.DaggerParanoidGlobalRootComponent;
+import javax.inject.Singleton;
 
-public class ParanoidSystemUIInitializer extends SystemUIInitializer {
-    public ParanoidSystemUIInitializer(Context context) {
-        super(context);
+import dagger.Component;
+
+@Singleton
+@Component(modules = {
+        GlobalModule.class})
+public interface ElytraGlobalRootComponent extends GlobalRootComponent {
+
+    @Component.Builder
+    interface Builder extends GlobalRootComponent.Builder {
+        ElytraGlobalRootComponent build();
     }
 
     @Override
-    protected GlobalRootComponent.Builder getGlobalRootComponentBuilder() {
-        return DaggerParanoidGlobalRootComponent.builder();
-    }
+    ElytraSysUIComponent.Builder getSysUIComponent();
 }

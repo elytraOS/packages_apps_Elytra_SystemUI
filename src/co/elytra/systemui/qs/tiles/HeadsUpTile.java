@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package co.aospa.systemui.qs.tiles;
+package co.elytra.systemui.qs.tiles;
 
 import static com.android.internal.logging.MetricsLogger.VIEW_UNKNOWN;
 

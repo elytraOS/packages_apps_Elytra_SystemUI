@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.systemui.volume;
+package co.elytra.systemui.volume;
 
 import android.content.Context;
 
@@ -28,11 +28,11 @@ import javax.inject.Inject;
  * TODO: Remove once {@link VolumeUI#VolumeUI} doesn't depend on {@link VolumeDialogComponent} anymore
  */
 @SysUISingleton
-public class ParanoidVolumeUI extends VolumeUI {
+public class ElytraVolumeUI extends VolumeUI {
 
     @Inject
-    public ParanoidVolumeUI(Context context,
-            ParanoidVolumeDialogComponent volumeDialogComponent) {
+    public ElytraVolumeUI(Context context,
+            ElytraVolumeDialogComponent volumeDialogComponent) {
         super(context, volumeDialogComponent);
     }
 }

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2021 The Android Open Source Project
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package co.aospa.systemui.dagger
+package co.elytra.systemui.dagger
 
-import co.aospa.systemui.volume.ParanoidVolumeUI
+import co.elytra.systemui.volume.ElytraVolumeUI
 import com.android.keyguard.KeyguardBiometricLockoutLogger
 import com.android.systemui.ChooserSelector
 import com.android.systemui.CoreStartable
@@ -56,7 +56,7 @@ import dagger.multibindings.IntoMap
  * Fork of [SystemUICoreStartableModule]
  */
 @Module(includes = [MultiUserUtilsModule::class])
-abstract class ParanoidSystemUICoreStartableModule {
+abstract class ElytraSystemUICoreStartableModule {
     /** Inject into AuthController.  */
     @Binds
     @IntoMap
@@ -195,8 +195,8 @@ abstract class ParanoidSystemUICoreStartableModule {
     /** Inject into VolumeUI.  */
     @Binds
     @IntoMap
-    @ClassKey(ParanoidVolumeUI::class)
-    abstract fun bindVolumeUI(sysui: ParanoidVolumeUI): CoreStartable
+    @ClassKey(ElytraVolumeUI::class)
+    abstract fun bindVolumeUI(sysui: ElytraVolumeUI): CoreStartable
 
     /** Inject into WindowMagnification.  */
     @Binds

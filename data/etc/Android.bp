@@ -1,12 +1,12 @@
 //
-// Copyright (C) 2022 Paranoid Android
+// Copyright (C) 2022 elytraOS
 // SPDX-License-Identifer: Apache-2.0
 //
 
 prebuilt_etc {
-    name: "privapp_whitelist_co.aospa.systemui",
+    name: "privapp_whitelist_co.elytra.systemui",
     system_ext_specific: true,
     sub_dir: "permissions",
-    src: "co.aospa.systemui.xml",
+    src: "co.elytra.systemui.xml",
     filename_from_src: true,
 }

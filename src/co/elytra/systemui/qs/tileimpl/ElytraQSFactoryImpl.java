@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.aospa.systemui.qs.tileimpl;
+package co.elytra.systemui.qs.tileimpl;
 
 import androidx.annotation.Nullable;
 
@@ -56,20 +56,20 @@ import com.android.systemui.util.leak.GarbageMonitor;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
-import co.aospa.systemui.qs.tiles.CaffeineTile;
-import co.aospa.systemui.qs.tiles.DataSwitchTile;
-import co.aospa.systemui.qs.tiles.HeadsUpTile;
+import co.elytra.systemui.qs.tiles.CaffeineTile;
+import co.elytra.systemui.qs.tiles.DataSwitchTile;
+import co.elytra.systemui.qs.tiles.HeadsUpTile;
 import dagger.Lazy;
 
 @SysUISingleton
-public class ParanoidQSFactoryImpl extends QSFactoryImpl {
+public class ElytraQSFactoryImpl extends QSFactoryImpl {
 
     private final Provider<CaffeineTile> mCaffeineTileProvider;
     private final Provider<DataSwitchTile> mDataSwitchTileProvider;
     private final Provider<HeadsUpTile> mHeadsUpTileProvider;
 
     @Inject
-    public ParanoidQSFactoryImpl(Lazy<QSHost> qsHostLazy,
+    public ElytraQSFactoryImpl(Lazy<QSHost> qsHostLazy,
             Provider<CustomTile.Builder> customTileBuilderProvider,
             Provider<WifiTile> wifiTileProvider,
             Provider<InternetTile> internetTileProvider,

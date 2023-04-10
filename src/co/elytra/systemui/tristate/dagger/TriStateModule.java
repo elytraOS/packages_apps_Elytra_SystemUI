@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2022 elytraOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.aospa.systemui.tristate.dagger;
+package co.elytra.systemui.tristate.dagger;
 
-import co.aospa.systemui.tristate.TriStateUiController;
-import co.aospa.systemui.tristate.TriStateUiControllerImpl;
+import co.elytra.systemui.tristate.TriStateUiController;
+import co.elytra.systemui.tristate.TriStateUiControllerImpl;
 import dagger.Binds;
 import dagger.Module;
 
